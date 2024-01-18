@@ -45,20 +45,30 @@ html,body {
     transform: translate(-80%, -80%);
 }
 
+#project {
+    text-align: center;
+    background-color: rgb(19, 45, 74);
+    height: 500px;
+    max-width:100%;
+    text-align: center;
+    margin-top: 0;
+    padding: 1rem 5rem;
+}
+
+#project > h3 {
+    color: rgb(176, 204, 221);
+}
+
 section{
     display:block;
 }
 
-.project-div {
-    float: left;
-}
-
 footer {
     font-weight: 300;
+    display: flex;
     justify-content: space-evenly;
-    padding: 2rem;
-    background: var(--main-gray);
-    border-top: 4px solid var(--main-red);
+    padding: 1.5rem;
+    text-align: center;
 }
 
 footer > section > a {
@@ -87,17 +97,24 @@ footer > section > a {
     }
 
     #project {
-        background-color: rgb(14, 41, 65);
         height: 900px;
         max-width:100%;
         text-align: center;
         margin-top: 0;
-        padding: 1rem 5rem;
-        background: rgb(19, 45, 74);
     }
 
-    #project > h3 {
-        color: rgb(176, 204, 221);
+    .project {
+        grid-template-columns: 1fr;
+        display: grid;
+        grid-gap: 4rem;
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        margin-bottom: 6rem;
+    }
+
+    .project > img {
+        display: block;
     }
     
     .project-div > p {
@@ -107,11 +124,10 @@ footer > section > a {
     }
 
     footer {
-        height: 5vw;
-    }
-
-    #contact-information {
+        font-weight: 300;
+        display: flex;
         justify-content: space-evenly;
-        padding: 2rem;
+        padding: 1rem;
+        text-align: center;
     }
 }
