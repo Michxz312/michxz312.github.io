@@ -7,13 +7,18 @@
     <title>Personal Portfolio Page</title>
 </head>
 <body>
-    <nav id="navbar">
-        <!--logo-->
-        <img src="https://ires.ubc.ca/files/2019/10/ubc-logo.png">
-        <a href="#welcome-section" class="nav-link">About</a>
-        <a href="#project" class="nav-link">Project</a>
-        <a href="#contact-information" class="nav-link">Contact</a>
-    </nav>
+    <!--Navigation Bar-->
+    <div class="navbar">
+        <ul>
+            <li><a href="#gacha">Home</a><div class="rect"></div></li>
+            <li><a href="#about">About</a><div class="rect"></div></li>
+            <li><a href="#projects">Projects</a><div class="rect"></div></li>
+        </ul>
+        <div class="navbar-toggler" id="toggler" onclick="mobilenav()">
+            <div class="line1" id="ln1"></div>
+            <div class="line2" id="ln2"></div>
+        </div>
+    </div>
 
     <!--welcome section-->
     <section id="welcome-section">
