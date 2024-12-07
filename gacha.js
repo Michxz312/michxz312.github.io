@@ -61,6 +61,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+function shakeCircle() {
+    const circles = document.querySelectorAll('.circle'); // Select all circles
+    circles.forEach(circle => {
+        circle.classList.add('shake'); // Add shake class to each circle
+    });
+
+    // Remove the shake class after the animation ends (0.5s duration)
+    setTimeout(() => {
+        circles.forEach(circle => {
+            circle.classList.remove('shake');
+        });
+    }, 450); // 500ms corresponds to the duration of the shake animation
+}
+
 let currentRotation = 0;
 
 document.getElementById('knob').addEventListener('click', function() {
