@@ -60,3 +60,18 @@ document.addEventListener("DOMContentLoaded", () => {
         glassContainer.appendChild(circle);
     }
 });
+
+let currentRotation = 0;
+
+document.getElementById('knob').addEventListener('click', function() {
+    const turner = this.querySelector('.turner');
+    
+    // Increment the rotation by 180 degrees with each click
+    currentRotation += 180;
+    
+    // Apply the new rotation
+    turner.style.transform = `translate(-50%, -50%) rotate(${currentRotation}deg)`;
+
+    shakeCircle();
+});
+
