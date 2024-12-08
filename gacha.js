@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// function for the gacha to shake
 function shakeCircle() {
     const circles = document.querySelectorAll('.circle'); // Select all circles
     circles.forEach(circle => {
@@ -73,19 +74,48 @@ function shakeCircle() {
             circle.classList.remove('shake');
         });
     }, 450); // 500ms corresponds to the duration of the shake animation
+    
+    // after shaking finishes, show circle in the output-slot
+    setTimeout(() => {
+        showCircle();  // Show circle after shaking
+    }, 500);  // Match with shake duration (450ms)
+
 }
 
 let currentRotation = 0;
+let shown = false;
 
 document.getElementById('knob').addEventListener('click', function() {
-    const turner = this.querySelector('.turner');
+    if (shown == false) {
+        const turner = this.querySelector('.turner');
     
-    // Increment the rotation by 180 degrees with each click
-    currentRotation += 180;
+        // Increment the rotation by 180 degrees with each click
+        currentRotation += 180;
     
-    // Apply the new rotation
-    turner.style.transform = `translate(-50%, -50%) rotate(${currentRotation}deg)`;
+        // Apply the new rotation
+        turner.style.transform = `translate(-50%, -50%) rotate(${currentRotation}deg)`;
 
-    shakeCircle();
+        shakeCircle();
+    }
 });
 
+function showCircle() {
+    shown = true;
+    const colors = [
+        "#ff0081", "#ff48a5", "#ff77bc", "#ffaed7", "#ffcae5",
+        "#6dd8dd", "#87d7e0", "#bad6e6", "#d4d5e9", "#eed4ec",
+        "#ffb6fc", "#eabaff", "#c9c0ff", "#b7ceff", "#b7ddff",
+        "#ff6ec7", "#ffb0b0", "#ffc7f8", "#ff68ad", "#ffb2cf"
+    ];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    const circle = document.querySelector('.output-slot .output-circle');
+    circle.style.backgroundColor = randomColor;
+
+    if (circle) {
+        circle.style.display = 'block';  // Make the circle visible
+    }
+}
+
+document.getElementById('.output-slot .output-circle').addEventListener('click', function() {
+    shown = false;
+});
