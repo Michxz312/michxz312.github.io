@@ -133,7 +133,7 @@ function showResume() {
     const popup = document.getElementById('popup');
     const pdfViewer = document.getElementById('pdfViewer');
     
-    pdfViewer.src = "../misc/Michealea_Faustine_Resume.pdf";
+    pdfViewer.src = '../misc/Michealea_Faustine_Resume.pdf';
 
     // Show the pdf
     popup.style.display = 'flex';
