@@ -10,52 +10,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Navigation Bar */
-
-.navbar {
-    position: fixed;
-    width: 100%; /* Ensures it spans the full width */
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(20px);
-}
-
-.navbar ul {
-    display: flex;
-    justify-content: space-evenly; /* Evenly spaces out the items */
-    align-items: center; /* Vertically aligns items */
-    list-style: none; /* Removes default list styling */
-    width: 60%; /* Specifies the width to center the `<ul>` properly */
-    padding: 0;
-    margin: 0;
-}
-
-.navbar ul li {
-    list-style: none;
-    font-weight: 500;
-}
-        
-.rect {
-    width: 0%;
-    height: 2px;
-    background-color: rgb(255, 255, 255);
-}
-
-.navbar ul li:hover .rect {
-    width: 100%;
-    transition: all 0.5s;
-}
-
-.navbar ul li a {
-    font-family: "Poppins", sans-serif;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
 /* Bubble Gum Machine */
 
 .gacha-machine {
