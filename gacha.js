@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Center of the container
     const containerCenterX = containerWidth / 2;
-    const containerCenterY = containerHeight / 2;
+    const containerCenterY = (containerHeight / 2);
 
     // Maximum radius for the circles to ensure they stay inside and maintain a gap from the border
     const maxRadius = containerRadius - circleRadius - gap;
 
-    for (let i = 0; i < 45; i++) {
+    for (let i = 0; i < 55; i++) {
         const circle = document.createElement('div');
         circle.classList.add('circle');
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             x = containerCenterX + 250 * Math.cos(angle);
 
              // Adjust vertical position to control the spread (using verticalSpreadFactor)
-            const verticalRadius = Math.random() * (maxRadius); // Limit vertical range
+            const verticalRadius = 1.3 * Math.random() * (maxRadius); // Limit vertical range
             y = bottomHalfYCenter + verticalRadius * Math.sin(angle); // Use bottom half of container for Y-position
 
             // Ensure the circle stays inside the container and respects the gap
@@ -134,7 +134,6 @@ function showResume() {
     const pdfViewer = document.getElementById('pdfViewer');
     
     pdfViewer.src = "misc/Michealea_Faustine_Resume.pdf";
-    console.log(pdfViewer.src);
 
     // Show the pdf
     popup.style.display = 'flex';
