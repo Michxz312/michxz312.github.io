@@ -133,10 +133,9 @@ function showResume() {
     const popup = document.getElementById('popup');
     const pdfViewer = document.getElementById('pdfViewer');
 
-    pdfViewer.src = "misc/resume.pdf";
-    console.log("PDF Source Set to: " + pdfViewer.src);
+    pdfViewer.src = "/misc/resume.pdf";
+    console.log(pdfViewer.src);
 
-    // Show the pdf
     popup.style.display = 'flex';
 }
 
