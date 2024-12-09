@@ -116,6 +116,36 @@ function showCircle() {
     }
 }
 
-document.getElementById('.output-slot .output-circle').addEventListener('click', function() {
-    shown = false;
+// make the circle hidden when pressed
+document.querySelector('.output-slot .output-circle').addEventListener('click', function() {
+    const circle = this;
+
+    // Check if circle is visible, then hide it
+    if (circle.style.display !== 'none') {
+        circle.style.display = 'none';  
+        shown = false; 
+
+        showResume();
+    }
+});
+
+function showResume() {
+    const popup = document.getElementById('popup');
+    const pdfViewer = document.getElementById('pdfViewer');
+
+    pdfViewer.src = 'Michealea_Faustine_Resume.pdf';
+
+    // Show the modal
+    popup.style.display = 'flex';  // Show the modal
+    console.log("Pop-up shown.");
+}
+
+// Close the pop-up when the close button is clicked
+document.getElementById('closePopup').addEventListener('click', function() {
+    const popup = document.getElementById('popup');
+    const pdfViewer = document.getElementById('pdfViewer');
+
+    // Hide the modal and reset the PDF viewer
+    popup.style.display = 'none';  // Hide the modal
+    pdfViewer.src = '';  // Reset the iframe source to stop the PDF from showing
 });
