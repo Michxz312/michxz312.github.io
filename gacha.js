@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Maximum radius for the circles to ensure they stay inside and maintain a gap from the border
     const maxRadius = containerRadius - circleRadius - gap;
 
-    for (let i = 0; i < 55; i++) {
+    for (let i = 0; i < 65; i++) {
         const circle = document.createElement('div');
         circle.classList.add('circle');
 
@@ -132,8 +132,9 @@ document.querySelector('.output-slot .output-circle').addEventListener('click', 
 function showResume() {
     const popup = document.getElementById('popup');
     const pdfViewer = document.getElementById('pdfViewer');
-    
-    pdfViewer.src = '../misc/Michealea_Faustine_Resume.pdf';
+
+    pdfViewer.src = "misc/resume.pdf";
+    console.log("PDF Source Set to: " + pdfViewer.src);
 
     // Show the pdf
     popup.style.display = 'flex';
@@ -144,6 +145,6 @@ document.getElementById('closePopup').addEventListener('click', function() {
     const popup = document.getElementById('popup');
     const pdfViewer = document.getElementById('pdfViewer');
 
-    popup.style.display = 'none';  // Hide the pdf
-    pdfViewer.src = '';  // Reset the iframe source to stop the PDF from showing
+    popup.style.display = 'none';
+    pdfViewer.src = '';
 });
