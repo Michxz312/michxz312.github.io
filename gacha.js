@@ -132,12 +132,12 @@ document.querySelector('.output-slot .output-circle').addEventListener('click', 
 function showResume() {
     const popup = document.getElementById('popup');
     const pdfViewer = document.getElementById('pdfViewer');
+    
+    pdfViewer.src = "misc/Michealea_Faustine_Resume.pdf";
+    console.log(pdfViewer.src);
 
-    pdfViewer.src = 'Michealea_Faustine_Resume.pdf';
-
-    // Show the modal
-    popup.style.display = 'flex';  // Show the modal
-    console.log("Pop-up shown.");
+    // Show the pdf
+    popup.style.display = 'flex';
 }
 
 // Close the pop-up when the close button is clicked
@@ -145,7 +145,6 @@ document.getElementById('closePopup').addEventListener('click', function() {
     const popup = document.getElementById('popup');
     const pdfViewer = document.getElementById('pdfViewer');
 
-    // Hide the modal and reset the PDF viewer
-    popup.style.display = 'none';  // Hide the modal
+    popup.style.display = 'none';  // Hide the pdf
     pdfViewer.src = '';  // Reset the iframe source to stop the PDF from showing
 });
