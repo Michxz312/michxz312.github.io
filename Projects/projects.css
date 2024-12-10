@@ -1,9 +1,46 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
     background: #d79e9e;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.responsive {
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.projects {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects:hover {
+    transform: scale(0.95); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.desc {
+    padding: 15px;
+    font-size: 1em;
+    color: #333;
+    text-align: center;
 }

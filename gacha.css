@@ -80,16 +80,16 @@ body {
 }
 
 .turner {
-    background: #616161; /* Color of the turner */
-    width: 45px;  /* Make it rectangular */
-    height: 6px;  /* Height of the rectangle */
+    background: #616161; 
+    width: 45px;  
+    height: 6px; 
     position: absolute;
-    top: 50%;     /* Center vertically */
-    left: 50%;    /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center it inside the knob */
-    border-radius: 4px; /* Rounded corners */
-    z-index: 6;   /* Ensure it is on top of the knob */
-    transition: transform 1s ease; /* Smooth transition for rotation */
+    top: 50%;   
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    border-radius: 4px; 
+    z-index: 6;  
+    transition: transform 1s ease;
 }
 
 .output-slot {
@@ -135,7 +135,7 @@ body {
 
 /* Show Resume */
 .popup {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
