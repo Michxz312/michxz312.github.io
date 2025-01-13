@@ -7,9 +7,9 @@ body {
 }
 
 .container {
-    width: 30%;
+    width: 80%;
     height: 100px;
-    margin: 100px auto;
+    margin: 50px auto;
     text-align: center;
 }
 
@@ -20,9 +20,11 @@ body {
 }
 
 .responsive {
-    width: 100%;
     box-sizing: border-box;
     display: inline-block;
+    border-radius: 8px;
+    padding: 10px;
+    width:100%;
 }
 
 .projects {
@@ -37,6 +39,13 @@ body {
 .projects:hover {
     transform: scale(0.95); /* Slightly enlarge on hover */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.projects img {
+    width: 100%; 
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .desc {
